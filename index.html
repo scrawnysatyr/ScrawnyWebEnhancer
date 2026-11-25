@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrawny Enhance — Local AI Image &amp; Video Enhancer</title>
+    <meta
+      name="description"
+      content="Scrawny Enhance is a native desktop tool built in Rust & GPUI for enhancing images and videos locally with AI — zero cloud limits."
+    />
+    <meta name="theme-color" content="#141418" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2318181d'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='36' fill='%23ff7300'>S</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="https://scrawny.site">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span class="brand-name">enhance.<span class="accent">scrawny.site</span></span>
+        </a>
+        <nav class="topbar-links" aria-label="Links">
+          <a class="topbar-link" href="https://scrawny.site">&larr; All Tools</a>
+          <a
+            class="topbar-link"
+            href="https://github.com/scrawnysatyr/scrawnyenhance"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="profile-card" aria-labelledby="hero-heading">
+          <div class="profile-avatar" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#ff7300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z" />
+            </svg>
+          </div>
+
+          <div class="profile-body">
+            <div class="profile-title-row">
+              <h1 id="hero-heading">Scrawny Enhance</h1>
+              <span class="status-pill">
+                <span class="status-dot" aria-hidden="true"></span>
+                Desktop App • Runs Locally
+              </span>
+            </div>
+            <p class="profile-bio">
+              Enhance and upscale your images and videos using AI running 100% locally on your
+              machine. Built natively in Rust with GPUI for instant responsiveness — no cloud
+              queues, no subscriptions, and complete privacy.
+            </p>
+            <div class="profile-meta">
+              <a
+                class="meta-chip meta-chip-primary"
+                href="https://github.com/scrawnysatyr/scrawnyenhance/releases/latest"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download Latest Release
+                <span aria-hidden="true">&darr;</span>
+              </a>
+              <a
+                class="meta-chip"
+                href="https://github.com/scrawnysatyr/scrawnyenhance"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Source on GitHub &nearr;
+              </a>
+              <span class="meta-chip">Windows Desktop</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="directory-section" aria-labelledby="features-heading">
+          <div class="section-header">
+            <div>
+              <h2 id="features-heading">Why Scrawny Enhance</h2>
+              <p class="section-subtitle">Fast, local AI enhancement without leaving your desktop.</p>
+            </div>
+          </div>
+
+          <div class="cards-grid">
+            <div class="project-card">
+              <div class="card-top">
+                <div class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                </div>
+                <span class="badge badge-orange">Privacy</span>
+              </div>
+              <div class="card-content">
+                <h3>100% Local AI</h3>
+                <p class="card-description">
+                  All image and video enhancement runs directly on your own hardware. Your files
+                  never leave your PC and there are zero upload limits.
+                </p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="card-top">
+                <div class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="9" cy="9" r="2" />
+                    <path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21" />
+                  </svg>
+                </div>
+                <span class="badge badge-orange">Media</span>
+              </div>
+              <div class="card-content">
+                <h3>Images &amp; Videos</h3>
+                <p class="card-description">
+                  Supports common image formats (PNG, JPEG, WebP, BMP, TIFF) as well as video
+                  enhancement pipelines with clean output control.
+                </p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="card-top">
+                <div class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                  </svg>
+                </div>
+                <span class="badge badge-orange">Native</span>
+              </div>
+              <div class="card-content">
+                <h3>Rust &amp; GPUI Speed</h3>
+                <p class="card-description">
+                  GPU-accelerated native desktop UI built with Rust and GPUI — lightweight memory
+                  footprint and zero Electron bloat.
+                </p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="card-top">
+                <div class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3v12" />
+                    <path d="m7 10 5 5 5-5" />
+                    <path d="M5 20h14" />
+                  </svg>
+                </div>
+                <span class="badge badge-live">Free &amp; Open</span>
+              </div>
+              <div class="card-content">
+                <h3>Zero Bloat</h3>
+                <p class="card-description">
+                  No account sign-in, no watermarks, and no recurring fees. Download the release
+                  and start enhancing immediately.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span><span class="accent">enhance.scrawny.site</span> &mdash; Scrawny Enhance</span>
+        <span class="mono">
+          <a href="https://scrawny.site" style="color: inherit; text-decoration: none;">scrawny.site</a>
+          &middot; github.com/scrawnysatyr
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>
